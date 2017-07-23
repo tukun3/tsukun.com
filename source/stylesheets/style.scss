@@ -118,7 +118,7 @@ margin-top: 100px;
 
 section{
   @include clearfix;
-  max-width:1080px;
+  max-width:90%;
   margin: 0 auto;
   margin-bottom: 30px;
   h2{
@@ -181,9 +181,9 @@ section{
 }
 
 
-/////////////
-/// Works ///
-/////////////
+////////////////////
+/// index(works) ///
+////////////////////
 .work-list-content{
   @include blocklink-container;
   margin-bottom: 30px;
@@ -275,7 +275,6 @@ section{
   .category{
     font-size: 14px;
     font-weight: bold;
-    font-family:'Quicksand', sans-serif;
   }
   ul{
     margin-bottom: 40px;
