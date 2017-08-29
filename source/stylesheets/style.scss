@@ -49,11 +49,11 @@ $set-prefix: '' , -moz- , -webkit-, -o-, -ms-;
 header{
   @include clearfix;
   position: fixed;
-  background-color: #FFF;
+  background-color: rgba(255,255,255,.5);
   top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 100;
   transition: all .5s ease-out;
   max-width:1200px;
@@ -63,7 +63,7 @@ header{
   h1{
     font-family:'Quicksand', sans-serif;
     width:300px;
-    font-size: 32px;
+    font-size: 30px;
     line-height: 60px;
     position: absolute;
     top: 0;
@@ -72,6 +72,7 @@ header{
     bottom: 0;
     margin: 0 auto;
     text-align: center;
+    visibility: hidden;
     a{
       color: #222;
        &:hover{
@@ -292,23 +293,26 @@ section{
       margin: 30px;
       letter-spacing:.03rem;
     }
+    .goods,.time{
+      font-size: 14px;
+      text-align: center;
+      color: lighten($main-color,10%);
+    }
+    .time{
+      font-size: 16px;
+      margin-top: 10px;
+      color: $main-color;
+    }
     ul{
       margin: 30px;
       li{
         list-style:square;
       }
-      .member,.time,.goods{
-        font-size: 14px;
-        font-weight: bold;
-        span{
-          font-weight: normal;
-          margin-right: 10px;
-        }
-      }
     }
   }
   .inner-minus-margin{
-    margin: 0 -100px;
+    margin: 0 -100px 70px;
+    background-color: lighten($main-color,80%);
     .inner{
       padding: 30px;
     }
@@ -324,6 +328,11 @@ section{
       border-radius: 4px;
       width: 100%;
     }
+  }
+  .logo{
+    width:275px;
+    padding: 40px 0;
+    margin: 0 auto 40px;
   }
 }
 
