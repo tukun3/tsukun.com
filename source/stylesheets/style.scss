@@ -49,17 +49,15 @@ $set-prefix: '' , -moz- , -webkit-, -o-, -ms-;
 header{
   @include clearfix;
   position: fixed;
-  background-color: rgba(255,255,255,.5);
+  background-color: rgba(255,255,255,.6);
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: 100;
   transition: all .5s ease-out;
-  max-width:1200px;
   height: 60px;
   margin: 0 auto;
-  border-bottom: 1px solid $main-color;
   h1{
     font-family:'Quicksand', sans-serif;
     width:300px;
@@ -76,10 +74,10 @@ header{
     a{
       color: #222;
        &:hover{
-            transition:0.5s;
-            color: #000;
-            font-weight: bold;
-          }
+        transition:0.5s;
+        color: #000;
+        font-weight: bold;
+      }
      }
     }
   p{
@@ -88,8 +86,10 @@ header{
   }
   nav{
     @include clearfix;
+    max-width:1200px;
+    margin: 0 auto;
     height: 60px;
-    font-family:'Quicksand', sans-serif;;
+    font-family:'Quicksand', sans-serif;
     ul{
       li{
         font-size: 18px;
@@ -98,7 +98,7 @@ header{
         a{
           cursor: pointer !important;
           color: #889;
-          line-height: 70px;
+          line-height: 60px;
           &:hover{
             transition:0.5s;
             color: #222;
@@ -123,7 +123,6 @@ margin-top: 100px;
 
 section{
   @include clearfix;
-  max-width:90%;
   margin: 0 auto;
   margin-bottom: 30px;
   h2{
@@ -311,7 +310,7 @@ section{
     }
   }
   .inner-minus-margin{
-    margin: 0 -100px 70px;
+    margin: 20px -100px 60px;
     background-color: lighten($main-color,80%);
     .inner{
       padding: 30px;
@@ -335,6 +334,39 @@ section{
     margin: 0 auto 40px;
   }
 }
+
+//slider
+.swiper-container {
+    width: 100%;
+    min-height: 320px;
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      width: 60%;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+    .inner{
+      // background-color: #fafafa;
+      padding: 30px;
+      .pages-img{
+        margin-bottom: 0;
+      }
+    }
+  }
+
 
 
 

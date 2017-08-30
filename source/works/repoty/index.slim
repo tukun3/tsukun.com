@@ -1,13 +1,15 @@
-section.pages.mt100
+section.pages
+  .pages-img
+    =image_tag 'repoty-top.jpg'
   .row
-    .medium-12.columns.mb40
+    .medium-12.columns
       .inner
         .category
           | Design /Cording
         h2 Repoty
-      .inner
-        .pages-img
-          =image_tag 'repoty01.jpg'
+      / .inner
+      /   .pages-img
+      /     =image_tag 'repoty01.jpg'
       .inner
         p
           | Goods株式会社が提供する飲食店向け口コミ分析ツール「Repoty」のUIデザイン、ロゴデザイン、フロントエンドコーディング（PC,css）を担当いたしました。
@@ -41,7 +43,7 @@ section.pages.mt100
           | さらに、LINEへのレポート自動送信・web管理ツール・レポートのCSVダウンロード機能により、店舗に対するお客様の反応をリアルタイムで知ることができます。
 
         .pages-img
-          =image_tag 'repoty05.jpg'
+          =image_tag 'repoty01.jpg'
     / .medium-12.columns.mb40
     /   .inner
     /     h3 顧客の課題
@@ -63,8 +65,21 @@ section.pages.mt100
         p
          | 口コミデータを集計表示する、また媒体や店舗データの管理編集を行うシステムであるので、
          | 表示すべき要素やユーザーアクションが多く、見易さ使いやすさを損なわずにそれらを盛り込むことには苦労しました。
-        .pages-img
-          =image_tag 'http://via.placeholder.com/900x400'
+        / .pages-img
+        /   =image_tag 'repoty05.jpg'
+      .swiper-container
+        .swiper-wrapper
+          .swiper-slide.inner
+            .pages-img
+              =image_tag 'repoty02.jpg'
+          .swiper-slide.inner
+            .pages-img
+              =image_tag 'repoty04.jpg'
+          .swiper-slide.inner
+            .pages-img
+              =image_tag 'repoty05.jpg'
+        .swiper-pagination
+
     .medium-12.columns.mb40
       .inner
         h3 ロゴデザイン
@@ -77,6 +92,13 @@ section.pages.mt100
         p
          | ロゴ左側の円形オブジェクトは、Repotyを使うことで数多のデータから課題を見つけた！というスッキリ感と、その結果経営向上してユーザーの視界・可能性が広がること、
          | さらにRepotyが顧客に対してデータ分析を超えた価値の提供をしていきたい、というメッセージが込められています。
-    .medium-12.columns
-      .inner
+
+  javascript:
+    var swiper = new Swiper('.swiper-container', {
+      pagination: '.swiper-pagination',
+      slidesPerView: 'auto',
+      centeredSlides: true,
+      paginationClickable: true,
+      spaceBetween: 30
+    });
 
