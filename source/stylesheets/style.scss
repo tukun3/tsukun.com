@@ -56,13 +56,13 @@ header{
   bottom: 0;
   z-index: 100;
   transition: all .5s ease-out;
-  height: 60px;
+  height: 55px;
   margin: 0 auto;
   h1{
     font-family:'Quicksand', sans-serif;
     width:300px;
     font-size: 30px;
-    line-height: 60px;
+    line-height: 55px;
     position: absolute;
     top: 0;
     left: 0;
@@ -88,7 +88,7 @@ header{
     @include clearfix;
     max-width:1200px;
     margin: 0 auto;
-    height: 60px;
+    height: 55px;
     font-family:'Quicksand', sans-serif;
     ul{
       li{
@@ -98,13 +98,11 @@ header{
         a{
           cursor: pointer !important;
           color: #889;
-          line-height: 60px;
+          line-height: 55px;
           &:hover{
             transition:0.5s;
             color: #222;
-            padding-bottom: 4px;
             border-bottom: 2px solid #222;
-            font-weight: bold;
           }
         }
       }
@@ -120,6 +118,9 @@ margin-top: 100px;
 .mb40{
     margin-bottom: 40px;
   }
+.mb60{
+  margin-bottom: 60px;
+}
 
 section{
   @include clearfix;
@@ -191,42 +192,72 @@ section{
 .work-list-content{
   @include blocklink-container;
   margin-bottom: 30px;
-  &:hover{
-    .work-list-img img{
-     -moz-transition: -moz-transform 0.2s linear;
-    -webkit-transition: -webkit-transform 0.2s linear;
-    -o-transition: -o-transform 0.2s linear;
-    -ms-transition: -ms-transform 0.2s linear;
-    transition: transform 0.2s linear;
-    -webkit-transform: scale(1.05);
-    -moz-transform: scale(1.05);
-    -o-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    transform: scale(1.05);
-    }
-}
+  transition: 0.5s;
+  overflow: hidden;
+  padding: 0;
 
-  .work-list-img{
+  .work-list-img {
+    position: relative;
     overflow: hidden;
-    width: 300px;
-    height:auto;
-    margin-bottom: 10px;
-    img{
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
+    width: 100%;
+    height: auto;
+    .more-text {
+      transition: 0.25s ease-out;
+      transform: translate(-50%, 70%);
+      opacity: 0;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      display: inline-block;
+      padding: 6px 12px 8px;
+      color: #fff;
+      font-size: 18px;
+      line-height: 1;
+      letter-spacing: 1px;
+      border: 1px solid #fff;
     }
   }
-  .yasuoka{
-    min-height: 425px;
+  .thumbnail-wrapper {
+    display: block;
+    margin: 0;
+    padding: 0;
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      transform: translateY(100%);
+      background: $main-color;
+      opacity: 0.8;
+      transition: opacity 600ms cubic-bezier(.25,.1,.25,1);
+    }
+    img {
+      display: block;
+      max-width: 100%;
+    }
   }
   .category{
     font-size: 12px;
     font-family:'Quicksand', sans-serif;
   }
   .title{
-  font-weight: bold;
-  font-size: 18px;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  &:hover {
+    .thumbnail-wrapper {
+      &:after {
+        transform: translateY(0);
+      }
+    }
+    .more-text {
+      transform: translate(-50%, -50%);
+      opacity: 1;
+    }
   }
 }
 
@@ -310,7 +341,6 @@ section{
     }
   }
   .inner-minus-margin{
-    margin: 20px -100px 60px;
     background-color: lighten($main-color,80%);
     .inner{
       padding: 30px;
@@ -381,3 +411,4 @@ footer{
   text-align: center;
   font-family:'Quicksand', sans-serif;
 }
+
