@@ -1,0 +1,66 @@
+//////////////////////
+/////// colors ///////
+//////////////////////
+
+$main-color:#222;
+
+
+//////////////////////
+/////// mixins ///////
+//////////////////////
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+  &:after { clear: both; }
+  & { zoom: 1; }
+}
+
+$set-prefix: '' , -moz- , -webkit-, -o-, -ms-;
+@mixin set-prefix($name, $value) {
+  @each $prefix in $set-prefix {
+    #{$prefix}#{$name}: $value;
+  }
+}
+
+@mixin blocklink-container {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  @include set-prefix(transition, opacity .3s linear);
+  &:hover { opacity: .6;
+            cursor: pointer;}
+  a {
+    &, &.blocklink {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      z-index: 999;
+    }
+  }
+}
+
+///////////////////////
+/// margin&padding ///
+//////////////////////
+
+.mt100{
+margin-top: 100px;
+}
+
+.mb40{
+    margin-bottom: 40px;
+  }
+.mb60{
+  margin-bottom: 60px;
+}
