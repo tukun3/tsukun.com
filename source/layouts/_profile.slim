@@ -1,23 +1,20 @@
-section#basic
+section#about.pages
   .row
     .small-12.columns
-      h2.mt100.name
-        | 佃 望
-        span
-          | Nozomu Tsukuda
+      h2 About me
+  .row
+    .medium-4.columns
+      .skill-item
+        img(src="http://via.placeholder.com/150x150")
+        h3 Nozomu Tsukuda<br><span>ツクダノゾム</span>
+    .medium-8.columns
+      p
+        | 鳥取県鳥取市出身。同志社大学経済学部卒業。
+        | 大学3年生からWebデザインの勉強を始め、１年間大学を休学し数社でのインターンを経験しました。
+        | 設計、デザイン、コーディング、DTPと幅広く担当していました。
+        | 意味のあるUI設計/デザイン、関係者とのコミュニケーションや複雑なものをわかりやすくすることを大切にしています。
+        | サービス・ものを根本から見つめ、一緒に考え走ることができるデザイナーです。
 
-    .medium-6.small-12.columns
-      ul
-        li Designer<span>/</span>Coder
-        li Goods inc デザイナー
-        li 同志社大学 経済学部 経済学科
-        li 鳥取県立鳥取西高等学校 卒業
-        li 1993年11月15日生まれ
-    .medium-6.small-12.columns
-      ul
-        li
-          | Facebook
-          = link_to 'https://www.facebook.com/zenagakiku','https://www.facebook.com/zenagakiku'
-        li
-          | Wantedly
-          = link_to 'https://www.wantedly.com/users/6888510','https://www.wantedly.com/users/6888510'
+  = partial "layouts/skills"
+
+  = partial "layouts/career"

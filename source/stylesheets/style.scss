@@ -2,9 +2,8 @@ body{
   font-family: YuGothic, '游ゴシック',"Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
 }
 
-header{
+.header-wrapper,.footer-wrapper{
   @include clearfix;
-  position: fixed;
   background-color: rgba(255,255,255,.6);
   top: 0;
   left: 0;
@@ -16,17 +15,15 @@ header{
   margin: 0 auto;
   h1{
     font-family:'Quicksand', sans-serif;
-    width:300px;
-    font-size: 30px;
-    line-height: 55px;
+    text-align: center;
+    font-size: 18px;
     position: absolute;
     top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
-    bottom: 0;
-    margin: 0 auto;
-    text-align: center;
-    visibility: hidden;
+    margin: auto;
+    line-height: 70px;
     a{
       color: #222;
        &:hover{
@@ -40,21 +37,25 @@ header{
     color: #889;
     float: right;
   }
-  nav{
+  .header-inner,.footer-inner{
     @include clearfix;
     max-width:1200px;
     margin: 0 auto;
-    height: 55px;
+    height: 70px;
     font-family:'Quicksand', sans-serif;
+    position: relative;
     ul{
       li{
-        font-size: 18px;
+        font-size: 14px;
         margin-right: 20px;
         float: left;
+        &:first-child{
+          float: left;
+        }
         a{
           cursor: pointer !important;
           color: #889;
-          line-height: 55px;
+          line-height: 70px;
           &:hover{
             transition:0.5s;
             color: #222;
@@ -65,25 +66,67 @@ header{
     }
   }
 }
+.footer-wrapper{
+  position: static;
+  height: auto;
+  background-color: lighten($main-color,80%);
+  .footer-inner{
+    height: auto;
+    padding: 40px 0;
+  }
+  .footer-copy{
+    margin: 0 auto;
+    padding: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: $main-color;
+    color: #fff;
+    text-align: center;
+    font-family:'Quicksand', sans-serif;
+  }
+}
 
 section{
   @include clearfix;
   margin: 0 auto;
-  margin-bottom: 30px;
+  padding: 20px 0 80px;
   h2{
     font-family:'Helvetica', sans-serif;
-    display: inline-block;
-    font-size: 28px;
+    font-size: 18px;
     font-weight: bold;
+    text-align: center;
     margin-bottom: 20px;
+  }
+}
+
+
+#top{
+  .top-wrapper{
+    position: relative;
+    background-color: #ececec;
+    height:400px;
+    margin-top: 55px;
+    .inner{
+      position: absolute;
+      background-color: #FFF;
+      width: 50%;
+      height: 20%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom:0;
+      margin: auto;
+      h1{
+        text-align: center;
+      }
+    }
   }
 }
 
 #work-lists{
   .row{
-    max-width: none;
+    max-width: 1240px;
     .columns{
-      padding: 0;
       h2{
         display: block;
         max-width:67.5rem;
@@ -93,68 +136,42 @@ section{
   }
 }
 
-#basic{
-  .name{
-    font-family: YuGothic, '游ゴシック',"Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-    font-weight: normal;
-    span{
-      margin-left: 14px;
-      font-size:18px;
-      font-family:'Quicksand', sans-serif;
-    }
+#about,#skill,#intern{
+  h2{
+    margin-bottom: 40px;
   }
-  li{
-  span{
-    color: #889;
-    margin: 0 6px;
-    font-size: 14px;
-    }
-  a{
-    margin-left: 10px;
+  h2,h3{
+    font-size: 21px;
+    text-align: center;
+    margin-bottom: 20px;
   }
+  h4{
+    font-size: 18px;
+    padding-left: 0;
   }
-}
 
-#skill{
-  margin-bottom: 40px;
-  ul{
-    @include clearfix;
-    margin-bottom: 0;
-    li{
-      float: left;
-      margin-right: 6px;
-      span{
-        color: #889;
-        margin-left: 6px;
-        font-size: 14px;
-      }
+  .skill-item{
+    text-align: center;
+    margin: 0 auto;
+  }
+  table{
+    margin: 0 auto;
+    border: none;
+    tr:nth-of-type(even){
+      background: #FFF;
     }
   }
 }
-
-#intern{
-  span{
-    font-style: italic;
-    font-family:'Quicksand', sans-serif;
-    color: #889;
-    margin-left: 4px;
-    font-size: 14px;
-  }
-}
-
-
 
 
 .gohst-button{
   @include blocklink-container;
-  width: 200px;
-  height: 52px;
-  margin-left: 18px;
+  width: 300px;
+  height: 50px;
   border: 1px solid $main-color;
-  padding:10px 15px ;
-  display: inline-block;
-  -webkit-border-radius: 8px;
-          border-radius: 8px;
+  padding:8px 12px ;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
   a{
     position: absolute;
     top:20%;
@@ -181,18 +198,7 @@ section{
   }
 }
 
-
-
-
-footer{
-  margin: 0 auto;
-  margin-top: 40px;
-  max-width: 1200px;
-  padding: 15px;
-  font-size: 14px;
-  font-weight: bold;
-  border-top: 1px solid $main-color;
-  text-align: center;
-  font-family:'Quicksand', sans-serif;
-}
+ .button-inner{
+   margin: 0 auto;
+ }
 

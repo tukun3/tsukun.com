@@ -45,6 +45,7 @@
       background: $main-color;
       opacity: 0.8;
       transition: opacity 600ms cubic-bezier(.25,.1,.25,1);
+
     }
     img {
       display: block;
@@ -66,6 +67,10 @@
       &:after {
         transform: translateY(0);
       }
+      img{
+        transition: transform 0.4s linear;
+        transform: scale(1.04);
+      }
     }
     .more-text {
       transform: translate(-50%, -50%);
@@ -80,7 +85,7 @@
 
 .pages{
   h2,h3,h4{
-    font-size: 30px;
+    font-size: 28px;
     margin: 0;
   }
   h3{
