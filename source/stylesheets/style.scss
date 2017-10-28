@@ -163,6 +163,23 @@ section{
   }
 }
 
+#about{
+  .skill-item{
+    max-width: 160px;
+    img{
+      border-radius: 130px;
+
+    }
+    h3{
+      margin: 10px;
+      font-size: 18px;
+      text-align: center;
+      span{
+        font-size: 14px;
+      }
+    }
+  }
+}
 
 .gohst-button{
   @include blocklink-container;

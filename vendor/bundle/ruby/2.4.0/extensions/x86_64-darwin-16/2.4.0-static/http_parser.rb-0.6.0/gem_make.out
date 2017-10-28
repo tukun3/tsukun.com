@@ -1,0 +1,16 @@
+current directory: /Users/tsukudanozomu/Desktop/tsukun.com/vendor/bundle/ruby/2.4.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+/Users/tsukudanozomu/.rbenv/versions/2.4.0/bin/ruby -r ./siteconf20171027-49804-s4f9j8.rb extconf.rb
+creating Makefile
+
+current directory: /Users/tsukudanozomu/Desktop/tsukun.com/vendor/bundle/ruby/2.4.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+make "DESTDIR=" clean
+
+current directory: /Users/tsukudanozomu/Desktop/tsukun.com/vendor/bundle/ruby/2.4.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+make "DESTDIR="
+compiling ruby_http_parser.c
+compiling ryah_http_parser.c
+linking shared-object ruby_http_parser.bundle
+
+current directory: /Users/tsukudanozomu/Desktop/tsukun.com/vendor/bundle/ruby/2.4.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 ruby_http_parser.bundle ./.gem.20171027-49804-1aqghiq
