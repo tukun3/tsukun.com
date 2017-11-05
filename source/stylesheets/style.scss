@@ -4,16 +4,16 @@ body{
 
 .header-wrapper,.footer-wrapper{
   @include clearfix;
-  // background-color: rgba(255,255,255,.6);
+  background-color: rgba(255,255,255,.6);
   position: fixed;
-  background-color: transparent;
+  // background-color: transparent;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: 100;
   transition: all .5s ease-out;
-  height: 55px;
+  height: 60px;
   margin: 0 auto;
   h1{
     font-family:'Quicksand', sans-serif;
@@ -25,7 +25,7 @@ body{
     left: 0;
     right: 0;
     margin: auto;
-    line-height: 70px;
+    line-height: 60px;
     a{
       color: #222;
        &:hover{
@@ -43,7 +43,7 @@ body{
     @include clearfix;
     max-width:1200px;
     margin: 0 auto;
-    height: 70px;
+    height: 60px;
     font-family:'Quicksand', sans-serif;
     position: relative;
     ul{
@@ -57,7 +57,7 @@ body{
         a{
           cursor: pointer !important;
           color: #889;
-          line-height: 70px;
+          line-height: 60px;
           &:hover{
             transition:0.5s;
             color: #222;

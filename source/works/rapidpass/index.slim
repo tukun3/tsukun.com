@@ -24,7 +24,7 @@ section.pages
         .goods
           | 担当箇所
         .time
-          | アプリ/ロゴ/LP/チラシ/看板のデザイン、アプリ/LPのhtml/CSSコーディング
+          | ユーザー向け/お店側管理アプリのデザイン・コーディング・ロゴ/LP/チラシ/看板の制作
       .medium-4.columns
         .goods
           | チーム
@@ -36,60 +36,51 @@ section.pages
         h3 RapidPassとは
       .inner
         p
-          | Repotyは、インターネットに分散するお店の口コミを自動収集し、口コミの傾向と店舗間の比較をレポートにて報告する飲食店向けマーケティングツールです。
-          | 時間の掛かる口コミの収集業務の手間を自動化します。
-          | また、内容に応じて口コミのネガポジ判定や「人」「商品」「価格」などの分類を自動で行い、お客様の声を店舗経営改善に繋げます。
-          | さらに、LINEへのレポート自動送信・web管理ツール・レポートのCSVダウンロード機能により、店舗に対するお客様の反応をリアルタイムで知ることができます。
+          | ランチタイムを快適にする、テイクアウト商品の事前予約サービスです。ユーザーは事前注文とキャッシュレス決済により待ち時間ゼロで商品を受け取れます。また、店舗側の管理アプリもあり、ユーザーからの予約を確認でき、事前に商品を調理してお客様にご提供できます。
 
-        .pages-img
-          / =image_tag 'rp-sp.png'
     .medium-12.columns.mb40
       .inner
         h3 UIデザイン
       .inner
-        h4 工夫したこと
+        h4 ユーザー向けアプリ
         p
-         | 口コミデータを集計表示する、また媒体や店舗データの管理編集を行うシステムであるので、
-         | 表示すべき要素やユーザーアクションが多く、見易さ使いやすさを損なわずにそれらを盛り込むことには苦労しました。
-      .inner
-        h4 苦労したこと
-        p
-         | 口コミデータを集計表示する、また媒体や店舗データの管理編集を行うシステムであるので、
-         | 表示すべき要素やユーザーアクションが多く、見易さ使いやすさを損なわずにそれらを盛り込むことには苦労しました。
-        / .pages-img
-        /   =image_tag 'repoty05.jpg'
+         | アプリ起動から注文完了までのタップ数を少なくすること、メニューリスト幅の調整をすることで、ユーザーがスムーズに素早く注文完了できるようにした。
       .swiper-container
-        .swiper-wrapper
-          .swiper-slide.inner
-            .pages-img
-              =image_tag 'repoty02.jpg'
-          .swiper-slide.inner
-            .pages-img
-              =image_tag 'repoty04.jpg'
-          .swiper-slide.inner
-            .pages-img
-              =image_tag 'repoty05.jpg'
+        .swiper-wrapper.mb40
+          .swiper-slide.inner(style="width:50%;")
+            .pages-img(style="max-height:500px;")
+              =image_tag 'step1_sp.png'
+          .swiper-slide.inner(style="width:50%;")
+            .pages-img(style="max-height:500px;")
+              =image_tag 'step2_sp.png'
+          .swiper-slide.inner(style="width:50%;")
+            .pages-img(style="max-height:500px;")
+              =image_tag 'step3_sp.png'
         .swiper-pagination
+
+    .medium-12.columns.mb40
+      .inner
+        h4 店舗向けアプリ
+        p
+         | 店舗担当者が、調理や配膳業務の傍らで使用することが想定された。そのため、遠目でも見分けやすいはっきりとした配色・文字、誤タップしにくい大きなボタン、注文があった時・調理が完了した時にはサウンドによる通知を出すことで、忙しい店舗担当者の使いやすさに考慮した。
+        .pages-img
+          =image_tag 'rp_shop.jpg'
 
     .medium-12.columns.mb40
       .inner
         h3 ロゴデザイン
       .inner
         p
-         | ロゴ作成の際、改めて「Repoty」の価値を考えました。それは、口コミ収集・分析をすることで、飲食店オーナーを悩み・労力・課題から解き放ち、経営向上に繋げること。
-         | ここからイメージしたモチーフは闇夜の航海を助ける「灯台」・データを視覚化する「グラフ」、イメージしたワードは「クリアー、ほどく、スッキリ、ひらめき、信頼感、知性...」でした。
+         | RapidPassのサービスコンセプトは「ランチの特急券」でした。それを表すため「Pass」部分はチケット風のデザインを置きました。また、サービス使用によるスピード感を表すため、「Rapid」部分はやや斜体にし、尖ったあしらいをつけました。
         .pages-img.logo
           =image_tag 'rapidpass01.jpg'
-        p
-         | ロゴ左側の円形オブジェクトは、Repotyを使うことで数多のデータから課題を見つけた！というスッキリ感と、その結果経営向上してユーザーの視界・可能性が広がること、
-         | さらにRepotyが顧客に対してデータ分析を超えた価値の提供をしていきたい、というメッセージが込められています。
-
+      
   javascript:
     var swiper = new Swiper('.swiper-container', {
       pagination: '.swiper-pagination',
       slidesPerView: 'auto',
       centeredSlides: true,
       paginationClickable: true,
-      spaceBetween: 30
+      spaceBetween: 0
     });
 
