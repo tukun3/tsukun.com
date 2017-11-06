@@ -43,13 +43,13 @@
       height: 100%;
       transform: translateY(100%);
       background: $main-color;
-      opacity: 0.8;
+      opacity: 0.9;
       transition: opacity 600ms cubic-bezier(.25,.1,.25,1);
 
     }
     img {
       display: block;
-      max-width: 100%;
+      width: 100%;
     }
   }
   .category{
